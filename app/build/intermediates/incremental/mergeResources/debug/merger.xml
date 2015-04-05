@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger version="2" >
+
+    <dataSet config="main" >
+        <source path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res" >
+            <file
+                name="ic_launcher"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\drawable-hdpi\ic_launcher.png"
+                qualifiers="hdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\drawable-mdpi\ic_launcher.png"
+                qualifiers="mdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi-v4"
+                type="drawable" />
+            <file
+                name="ic_launcher"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\drawable-xxhdpi\ic_launcher.png"
+                qualifiers="xxhdpi-v4"
+                type="drawable" />
+            <file
+                name="activity_fragment"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\layout\activity_fragment.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="activity_lesson_list"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\layout\activity_lesson_list.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="dialog_time"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\layout\dialog_time.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="fragment_lesson"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\layout\fragment_lesson.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="list_item_lesson"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\layout\list_item_lesson.xml"
+                qualifiers=""
+                type="layout" />
+            <file
+                name="day"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\menu\day.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="day_list"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\menu\day_list.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                name="lesson_list"
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\menu\lesson_list.xml"
+                qualifiers=""
+                type="menu" />
+            <file
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\values\dimens.xml"
+                qualifiers="" >
+                <dimen name="activity_horizontal_margin" >16dp
+                </dimen>
+                <dimen name="activity_vertical_margin" >16dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\values\strings.xml"
+                qualifiers="" >
+                <string name="title_activity_lesson_list" >LessonListActivity
+                </string>
+                <string name="action_settings" >Settings
+                </string>
+                <string name="add_lesson_text" >+ Добавить пару
+                </string>
+                <string name="title_activity_days_list" >Расписание
+                </string>
+                <string name="hello_blank_fragment" >Hello blank fragment
+                </string>
+                <string name="get_by" >Сдано
+                </string>
+                <string name="homework_title_string" >Домашнее задание
+                </string>
+                <string name="delete_button_text" >Удалить
+                </string>
+                <string name="name_classes_text" >Введите название предмета
+                </string>
+                <string name="necessarily_string" >Обязательно
+                </string>
+                <string name="room_text" >Введите номер аудитории
+                </string>
+                <string name="title_activity_day_list" >DayListActivity
+                </string>
+                <string name="name_teacher_text" >Введите имя преподавателя
+                </string>
+                <string name="time_dialog_title" >Начало занятия:
+                </string>
+
+                <string-array name="DaysOfWeek" >
+                    <item name="monday">
+Понедельник
+                    </item>
+                    <item name="tuesday">
+Вторник
+                    </item>
+                    <item name="wednesday">
+Среда
+                    </item>
+                    <item name="thursday">
+Четверг
+                    </item>
+                    <item name="friday">
+Пятница
+                    </item>
+                    <item name="saturday">
+Суббота
+                    </item>
+                    <item name="sunday">
+Воскресенье
+                    </item>
+                </string-array>
+
+                <string name="lesson_title" >Занятия
+                </string>
+                <string name="app_name" >Schedule_classes
+                </string>
+                <string name="homework_text" >Запишите задание сюда
+                </string>
+
+                <string-array name="WeekType" >
+                    <item name="even">
+ ч/н
+                    </item>
+                    <item name="odd">
+ н/н
+                    </item>
+                </string-array>
+
+                <string name="hello_world" >Hello world!
+                </string>
+            </file>
+            <file
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\values\styles.xml"
+                qualifiers="" >
+
+                <style
+                    name="AppTheme"
+                    parent="android:Theme.Holo.Light.DarkActionBar" >
+
+                    <!-- Customize your theme here. -->
+                </style>
+            </file>
+            <file
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\values-w820dp\dimens.xml"
+                qualifiers="w820dp-v13" >
+                <dimen name="activity_horizontal_margin" >64dp
+                </dimen>
+            </file>
+            <file
+                path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\main\res\values\ids.xml"
+                qualifiers="" >
+                <item
+                    name="viewPager"
+                    type="id"/>
+            </file>
+        </source>
+        <source path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\build\generated\res\rs\debug" />
+        <source path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\build\generated\res\generated\debug" />
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="C:\Users\Адольф\AndroidStudioProjects\Schedule_classes\app\src\debug\res" />
+    </dataSet>
+
+</merger>
