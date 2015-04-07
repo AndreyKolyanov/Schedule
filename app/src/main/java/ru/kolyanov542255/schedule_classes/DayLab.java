@@ -29,41 +29,46 @@ public class DayLab {
         this.context = appContext;
         this.mSerializer = new ScheduleJSONSerializer(context, FILENAME);
 
+        oddWeek = new ArrayList<DayOfWeek>();
+        evenWeek = new ArrayList<DayOfWeek>();
+
         try {
+            Log.d(TAG, "schedule loading");
             days = mSerializer.loadSchedule();
+            Log.d(TAG, "schedule loaded");
+            for (DayOfWeek d: days){
+                if (d.isOdd()){
+                    oddWeek.add(d);
+                }else{
+                    evenWeek.add(d);
+                }
+            }
         } catch (Exception e) {
             days = new ArrayList<DayOfWeek>();
             Log.e(TAG, "Error loading lessons: ", e);
          }
-        oddWeek = new ArrayList<DayOfWeek>();
-        evenWeek = new ArrayList<DayOfWeek>();
 
+        if (days.isEmpty()) {
+            Log.d(TAG, "days Empty");
+            for (int i = 0, j = 0; i < 12; i++, j++) {
+                DayOfWeek d = new DayOfWeek(days_names[j].toString());
+                if (i <= 5) {
+                    d.setOdd(false);
+                    evenWeek.add(d);
+                }
 
-        for (DayOfWeek d: days){
-            if (d.isOdd()){
-                oddWeek.add(d);
-            }else{
-                evenWeek.add(d);
+                if (i == 5) {
+                    j = -1;
+                }
+
+                if (i > 5) {
+                    d.setOdd(true);
+                    oddWeek.add(d);
+                }
+
+                days.add(d);
             }
         }
-        /*for (int i = 0, j = 0; i < 12; i++, j++){
-            DayOfWeek d = new DayOfWeek(days_names[j].toString());
-            if (i <= 5) {
-                d.setOdd(false);
-                evenWeek.add(d);
-            }
-
-            if (i == 5) {
-                j = -1;
-            }
-
-            if (i > 5){
-                d.setOdd(true);
-                oddWeek.add(d);
-            }
-
-            days.add(d);
-        }*/
     }
 
     public static DayLab get(Context c){

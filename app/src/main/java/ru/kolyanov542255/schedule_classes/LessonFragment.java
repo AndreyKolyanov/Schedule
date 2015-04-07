@@ -8,6 +8,9 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -22,7 +25,7 @@ public class LessonFragment extends Fragment {
     private EditText titleField;
     private EditText teacherField;
     private EditText roomField;
-    private Button timeButton, deleteButton;
+    private Button timeButton;
 
     public static final String EXTRA_LESSON_ID = "ru.kolyanov542255.schedule_classes.lesson_id";
     private static final String DIALOG_TIME = "time";
@@ -31,6 +34,8 @@ public class LessonFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+
         UUID lessonId = (UUID)getArguments().getSerializable(EXTRA_LESSON_ID);
         UUID dayId = (UUID)getArguments().getSerializable(DayListFragment.EXTRA_DAY_ID);
         day = DayLab.get(getActivity()).getDay(dayId);
@@ -67,14 +72,14 @@ public class LessonFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup parent,
-                             Bundle savedInstanceState){
-        View v = inflater.inflate(R.layout.fragment_lesson, parent, false);
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.lesson_menu, menu);
+    }
 
-        deleteButton = (Button)v.findViewById(R.id.delete_button);
-
-        deleteButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.lesson_menu_item_delele:
                 int num = 1;
                 if (day.isOdd()){
                     num = 0;
@@ -86,8 +91,16 @@ public class LessonFragment extends Fragment {
 
                 day.removeLesson(lesson);
                 startActivity(i);
-            }
-        });
+                return  true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup parent,
+                             Bundle savedInstanceState){
+        View v = inflater.inflate(R.layout.fragment_lesson, parent, false);
 
         timeButton = (Button)v.findViewById(R.id.week_type_begin_time);
         updateDate();

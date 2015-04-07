@@ -34,23 +34,24 @@ public class ScheduleJSONSerializer {
     public ArrayList<DayOfWeek> loadSchedule() throws IOException, JSONException{
         ArrayList<DayOfWeek> days = new ArrayList<DayOfWeek>();
         BufferedReader reader = null;
-        try{
+        try {
             InputStream in = context.openFileInput(filename);
             reader = new BufferedReader(new InputStreamReader(in));
             StringBuilder jsonString = new StringBuilder();
             String line = null;
 
-            while ((line = reader.readLine()) != null){
+            while ((line = reader.readLine()) != null) {
                 jsonString.append(line);
                 Log.d("READ", line);
             }
 
             JSONArray array = (JSONArray) new JSONTokener(jsonString.toString()).nextValue();
-            for (int i = 0; i < array.length(); i++){
+            for (int i = 0; i < array.length(); i++) {
                 days.add(new DayOfWeek(array.getJSONObject(i)));
             }
-        } catch (FileNotFoundException e){
 
+        } catch (FileNotFoundException e){
+            Log.d("READ", "file not found");
         } finally {
             if (reader != null){
                 reader.close();

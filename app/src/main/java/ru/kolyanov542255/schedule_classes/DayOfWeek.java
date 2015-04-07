@@ -107,4 +107,8 @@ public class DayOfWeek {
     public void delLesson(){
         lessons.remove(onDel);
     }
+
+    public void delLesson(Lesson lesson){
+        lessons.remove(lesson);
+    }
 }

@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -34,6 +35,7 @@ public class WeekPagerActivity extends FragmentActivity {
             @Override
             public Fragment getItem(int i) {
                 setTitle("Раписание ч/н");
+                Log.d("PAGER", "App running");
                 return DayListFragment.newInstance(i);
             }
 

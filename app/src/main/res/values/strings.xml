@@ -18,6 +18,7 @@
     <string name="time_dialog_title">Начало занятия:</string>
     <string name="title_activity_days_list">Расписание</string>
     <string name="add_lesson_text">+ Добавить пару</string>
+    <string name="add_lesson_menu">Добавить</string>
 
     <string-array name="DaysOfWeek">
         <item name="monday">Понедельник</item>

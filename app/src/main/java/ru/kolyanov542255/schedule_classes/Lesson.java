@@ -26,8 +26,9 @@ public class Lesson {
     public static final String LESSON_BEGIN_TIME = "time";
     public static final String LESSON_TEACHER = "teacher";
     public static final String LESSON_ROOM = "room";
+    public static final String IS_SHOW_TIME = "showTime";
 
-    Lesson(String name){//Временный конструктор
+    Lesson(String name){
         this.isShowTime = true;
         this.id = UUID.randomUUID();
         this.name = name;
@@ -112,6 +113,7 @@ public class Lesson {
         json.put(LESSON_BEGIN_TIME, beginTime.getTime());
         json.put(LESSON_TEACHER, teacher);
         json.put(LESSON_ROOM, room);
+        json.put(IS_SHOW_TIME, isShowTime);
 
         return json;
 

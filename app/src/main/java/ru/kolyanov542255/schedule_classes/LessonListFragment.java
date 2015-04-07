@@ -3,10 +3,20 @@ package ru.kolyanov542255.schedule_classes;
 import android.app.ListFragment;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.util.Log;
+import android.view.ActionMode;
+import android.view.ContextMenu;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -26,6 +36,7 @@ public class LessonListFragment extends ListFragment {
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
 
         String title = getArguments().getString(DayListFragment.EXTRA_DAY_NAME);
         int odd = getArguments().getInt(DayListFragment.EXTRA_WEEK_TYPE);
@@ -34,9 +45,7 @@ public class LessonListFragment extends ListFragment {
 
         getActivity().setTitle(title + " " + oddOrEven[odd]);
 
-
         lessons = new ArrayList<Lesson>();
-        //lessons = LessonLab.get(getActivity()).getLessons();
 
         UUID dayId = (UUID)getArguments().getSerializable(DayListFragment.EXTRA_DAY_ID);
         day = DayLab.get(getActivity()).getDay(dayId);
@@ -58,22 +67,75 @@ public class LessonListFragment extends ListFragment {
         fragment.setArguments(args);
         return fragment;
     }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup parent,
+            Bundle savedInstanceState) {
+        View v = super.onCreateView(inflater, parent, savedInstanceState);
+
+        ListView listView = (ListView)v.findViewById(android.R.id.list);
+        //registerForContextMenu(listView);
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
+            registerForContextMenu(listView);
+        } else {
+            if (NavUtils.getParentActivityName(getActivity()) != null) {
+                getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+            }
+            listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE_MODAL);
+            listView.setMultiChoiceModeListener(new AbsListView.MultiChoiceModeListener() {
+                @Override
+                public void onItemCheckedStateChanged(ActionMode actionMode, int i, long l, boolean b) {
+                    //don't used
+                }
+
+                @Override
+                public boolean onCreateActionMode(ActionMode actionMode, Menu menu) {
+                    MenuInflater inflater = actionMode.getMenuInflater();
+                    inflater.inflate(R.menu.lesson_menu, menu);
+                    return true;
+                }
+
+                @Override
+                public boolean onPrepareActionMode(ActionMode actionMode, Menu menu) {
+                    return false;
+                }
+
+                @Override
+                public boolean onActionItemClicked(ActionMode actionMode, MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.lesson_menu_item_delele:
+                            LessonAdapter adapter = (LessonAdapter)getListAdapter();
+                            for (int i = adapter.getCount() - 1; i >= 0; i--) {
+                                if (getListView().isItemChecked(i)) {
+                                    day.delLesson(adapter.getItem(i));
+                                    DayLab.get(getActivity()).saveSchedule();
+                                }
+                            }
+                            actionMode.finish();
+                            adapter.notifyDataSetChanged();
+                            return true;
+                        default:
+                            return false;
+                    }
+                }
+
+                @Override
+                public void onDestroyActionMode(ActionMode actionMode) {
+                    //don't used
+                }
+            });
+        }
+        return v;
+    }
 
     public void onResume(){
         super.onResume();
         day.delLesson();
         ((LessonAdapter)getListAdapter()).notifyDataSetChanged();
+        DayLab.get(getActivity()).saveSchedule();
 
     }
 
-    @Override
-    public void onListItemClick(ListView l, View v, int position, long id){
-        if (position == 0){
-            day.addLesson(new Lesson(""));
-            position = lessons.size() - 1;
-            lessons = day.getLessons();
-            ((LessonAdapter)getListAdapter()).notifyDataSetChanged();
-        }
+    private void openLesson(int position){
         Lesson less = ((LessonAdapter)getListAdapter()).getItem(position);
         Intent i = new Intent(getActivity(), LessonActivity.class);
         i.putExtra(DayListFragment.EXTRA_DAY_ID, day.getId());
@@ -81,6 +143,55 @@ public class LessonListFragment extends ListFragment {
         startActivity(i);
     }
 
+    @Override
+    public void onListItemClick(ListView l, View v, int position, long id){
+        openLesson(position);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater){
+        super.onCreateOptionsMenu(menu, inflater);
+        inflater.inflate(R.menu.lesson_list_menu, menu);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item){
+        switch (item.getItemId()){
+            case R.id.menu_item_new_lesson:
+                    Lesson newLesson = new Lesson("");
+                    day.addLesson(newLesson);
+                    lessons = day.getLessons();
+                    ((LessonAdapter)getListAdapter()).notifyDataSetChanged();
+                    openLesson(((LessonAdapter)getListAdapter()).getPosition(newLesson));
+                    return true;
+            case android.R.id.home:
+                if (NavUtils.getParentActivityName(getActivity()) != null){
+                    NavUtils.navigateUpFromSameTask(getActivity());
+                }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo){
+        getActivity().getMenuInflater().inflate(R.menu.lesson_list_context_menu, menu);
+    }
+
+    public boolean onContextItemSelected(MenuItem item){
+        AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo)item.getMenuInfo();
+        int position = info.position;
+        LessonAdapter adapter = (LessonAdapter)getListAdapter();
+        Lesson lesson = adapter.getItem(position);
+
+        switch (item.getItemId()){
+            case R.id.lessonlist_context_menu_item_delete:
+                day.delLesson(lesson);
+                adapter.notifyDataSetChanged();
+                return true;
+            default:
+                return super.onContextItemSelected(item);
+        }
+    }
 
     private class LessonAdapter extends ArrayAdapter<Lesson>{
 

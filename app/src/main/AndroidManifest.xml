@@ -9,11 +9,13 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".LessonActivity"
-            android:label="@string/app_name" >
+            android:label="@string/title_activity_days_list" >
         </activity>
         <activity
             android:name=".LessonListActivity"
             android:label="@string/title_activity_lesson_list" >
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                android:value=".WeekPagerActivity"/>
         </activity>
         <activity android:name=".WeekPagerActivity"
             android:label="@string/title_activity_days_list">

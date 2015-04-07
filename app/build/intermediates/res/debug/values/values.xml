@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
-    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule_classes/app/src/main/res/values/strings.xml -->
-    <eat-comment />
-
+    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string-array name="DaysOfWeek">
         <item name="monday">Понедельник</item>
         <item name="tuesday">Вторник</item>
@@ -17,19 +15,17 @@
         <item name="even"> ч/н</item>
         <item name="odd"> н/н</item>
     </string-array>
-    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule_classes/app/src/main/res/values/dimens.xml -->
-    <eat-comment />
-
+    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/src/main/res/values/dimens.xml -->
+    <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule_classes/app/src/main/res/values/ids.xml -->
-    <eat-comment />
-
+    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/src/main/res/values/ids.xml -->
+    <eat-comment/>
     <item name="viewPager" type="id"/>
-    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule_classes/app/src/main/res/values/strings.xml -->
-    <eat-comment />
-
+    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
     <string name="action_settings">Settings</string>
+    <string name="add_lesson_menu">Добавить</string>
     <string name="add_lesson_text">+ Добавить пару</string>
     <string name="app_name">Schedule_classes</string>
     <string name="delete_button_text">Удалить</string>
@@ -47,11 +43,9 @@
     <string name="title_activity_day_list">DayListActivity</string>
     <string name="title_activity_days_list">Расписание</string>
     <string name="title_activity_lesson_list">LessonListActivity</string>
-    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule_classes/app/src/main/res/values/styles.xml -->
-    <eat-comment />
-
+    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
     </style>
-
 </resources>
