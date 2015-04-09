@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/build/intermediates/exploded-aar/Schedule/vksdk_library/unspecified/res/values-w720dp-v13/values.xml -->
+    <eat-comment/>
+    <dimen name="vk_share_dialog_view_padding">160dp</dimen>
+</resources>

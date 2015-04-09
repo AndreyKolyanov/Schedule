@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_activated="true"
+        android:drawable="@android:color/darker_gray"
+        />
+</selector><!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/src/main/res/drawable/backgorund_activated.xml -->
