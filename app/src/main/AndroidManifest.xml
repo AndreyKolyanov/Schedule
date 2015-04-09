@@ -2,11 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="ru.kolyanov542255.schedule_classes" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/title_activity_days_list"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.vk.sdk.VKOpenAuthActivity" />
         <activity
             android:name=".LessonActivity"
             android:label="@string/title_activity_days_list" >
@@ -14,17 +17,27 @@
         <activity
             android:name=".LessonListActivity"
             android:label="@string/title_activity_lesson_list" >
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
-                android:value=".WeekPagerActivity"/>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".WeekPagerActivity" />
         </activity>
-        <activity android:name=".WeekPagerActivity"
-            android:label="@string/title_activity_days_list">
+        <activity
+            android:name=".WeekPagerActivity"
+            android:label="@string/title_activity_days_list" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".SettingsPagerActivity"
+            android:label="@string/title_activity_settings_pager"
+            android:parentActivityName=".WeekPagerActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.kolyanov542255.schedule_classes.WeekPagerActivity" />
         </activity>
     </application>
 
 </manifest>
-

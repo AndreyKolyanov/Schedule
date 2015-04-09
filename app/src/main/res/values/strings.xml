@@ -9,6 +9,7 @@
     <string name="get_by">Сдано</string>
     <string name="name_classes_text">Введите название предмета</string>
     <string name="name_teacher_text">Введите имя преподавателя</string>
+    <string name="settings_string">Настройки</string>
     <string name="room_text">Введите номер аудитории</string>
     <string name="homework_text">Запишите задание сюда</string>
     <string name="delete_button_text">Удалить</string>
@@ -35,5 +36,6 @@
     </string-array>
 
     <string name="title_activity_day_list">DayListActivity</string>
+    <string name="title_activity_settings_pager">SettingsPagerActivity</string>
 
 </resources>
