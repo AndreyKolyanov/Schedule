@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:title="@string/delete_button_text"
-        android:id="@+id/lessonlist_context_menu_item_delete"
-        android:icon="@drawable/ic_menu_delete"
-        android:showAsAction="ifRoom|withText"/>
-</menu><!-- From: file:/home/andrew/androidStudioProjects/Schedule/app/src/main/res/menu/lesson_list_context_menu.xml -->
