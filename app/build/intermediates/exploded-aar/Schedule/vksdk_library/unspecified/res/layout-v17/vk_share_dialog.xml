@@ -182,4 +182,4 @@
                 android:textColor="@color/vk_share_blue_color" />
         </LinearLayout>
     </LinearLayout>
-</RelativeLayout><!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/vksdk_library/src/main/res/layout-v17/vk_share_dialog.xml -->
+</RelativeLayout><!-- From: file:/home/andrew/androidStudioProjects/Schedule/vksdk_library/src/main/res/layout-v17/vk_share_dialog.xml -->

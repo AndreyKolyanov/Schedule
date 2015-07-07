@@ -41,4 +41,4 @@
         android:imeOptions="actionSend"
         android:inputType="textNoSuggestions"/>
 </RelativeLayout>
-<!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/vksdk_library/src/main/res/layout/vk_captcha_dialog.xml -->
+<!-- From: file:/home/andrew/androidStudioProjects/Schedule/vksdk_library/src/main/res/layout/vk_captcha_dialog.xml -->

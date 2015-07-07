@@ -9,7 +9,6 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/title_activity_days_list"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.vk.sdk.VKOpenAuthActivity" />
         <activity
             android:name=".LessonActivity"
             android:label="@string/title_activity_days_list" >

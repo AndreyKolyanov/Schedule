@@ -2,32 +2,25 @@
 <items version="2" >
 
     <item
-        jar="C:\Users\Адольф\AndroidStudioProjects\Schedule\app\build\intermediates\exploded-aar\Schedule\vksdk_library\unspecified\classes.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="59dfb0922140f294f4d04b982911790503999548">
-        <dex dex="C:\Users\Адольф\AndroidStudioProjects\Schedule\app\build\intermediates\pre-dexed\debug\classes-fa64ac574c7d3f31562d69d1a483f8b504078dc9.jar" />
-    </item>
-    <item
-        jar="E:\Программы\Андроид\Eclpse\adt-bundle-windows-x86-20140702\sdk\extras\android\m2repository\com\android\support\support-annotations\22.0.0\support-annotations-22.0.0.jar"
+        jar="/home/andrew/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.0.0/support-annotations-22.0.0.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="685d0b2c590447e85284ed84712cb363ba04eff8">
-        <dex dex="C:\Users\Адольф\AndroidStudioProjects\Schedule\app\build\intermediates\pre-dexed\debug\support-annotations-22.0.0-50c44474e7c8015c55111f2d43a66578dc279464.jar" />
+        <dex dex="/home/andrew/androidStudioProjects/Schedule/app/build/intermediates/pre-dexed/debug/support-annotations-22.0.0-57df8e9b19ee25a0bed83c1d35859c621280683d.jar" />
     </item>
     <item
-        jar="C:\Users\Адольф\AndroidStudioProjects\Schedule\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\classes.jar"
+        jar="/home/andrew/androidStudioProjects/Schedule/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="4e86306289ace4aa0cfec44a05ed2b410d36989d">
-        <dex dex="C:\Users\Адольф\AndroidStudioProjects\Schedule\app\build\intermediates\pre-dexed\debug\classes-0cc11c0e6cc85aa3816a28460a002d299ad10e67.jar" />
+        <dex dex="/home/andrew/androidStudioProjects/Schedule/app/build/intermediates/pre-dexed/debug/classes-2328978d070c61490859ef4c310c0ebe134252b8.jar" />
     </item>
     <item
-        jar="C:\Users\Адольф\AndroidStudioProjects\Schedule\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.0.0\libs\internal_impl-22.0.0.jar"
+        jar="/home/andrew/androidStudioProjects/Schedule/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.0.0/libs/internal_impl-22.0.0.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="b5b92f469d515a13d778900f6d50c03d12f35504">
-        <dex dex="C:\Users\Адольф\AndroidStudioProjects\Schedule\app\build\intermediates\pre-dexed\debug\internal_impl-22.0.0-e75577c822c4977850cabc367a2ca75ab5856d21.jar" />
+        <dex dex="/home/andrew/androidStudioProjects/Schedule/app/build/intermediates/pre-dexed/debug/internal_impl-22.0.0-abf60e20325a701476c345b9c2074eae033d4d6a.jar" />
     </item>
 
 </items>

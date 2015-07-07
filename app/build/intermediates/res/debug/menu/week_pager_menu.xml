@@ -2,7 +2,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/pager_week_menu"
         android:title="@string/settings_string"
-        android:icon="@android:drawable/ic_menu_manage"
+        android:icon="@drawable/ic_menu_settings"
         android:showAsAction="ifRoom|withText"/>
 
-</menu><!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/src/main/res/menu/week_pager_menu.xml -->
+</menu><!-- From: file:/home/andrew/androidStudioProjects/Schedule/app/src/main/res/menu/week_pager_menu.xml -->

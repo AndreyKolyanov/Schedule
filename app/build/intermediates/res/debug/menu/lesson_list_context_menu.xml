@@ -3,6 +3,6 @@
     <item
         android:title="@string/delete_button_text"
         android:id="@+id/lessonlist_context_menu_item_delete"
-        android:icon="@android:drawable/ic_menu_delete"
+        android:icon="@drawable/ic_menu_delete"
         android:showAsAction="ifRoom|withText"/>
-</menu><!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/src/main/res/menu/lesson_list_context_menu.xml -->
+</menu><!-- From: file:/home/andrew/androidStudioProjects/Schedule/app/src/main/res/menu/lesson_list_context_menu.xml -->

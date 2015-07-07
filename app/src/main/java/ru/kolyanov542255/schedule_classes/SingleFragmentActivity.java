@@ -6,7 +6,6 @@ import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.vk.sdk.VKUIHelper;
 
 /**
  * Created by Адольф on 17.01.2015.
@@ -26,22 +25,5 @@ public abstract class SingleFragmentActivity extends Activity {
             fragment = createFragment();
             fm.beginTransaction().add(R.id.fragmentContainer, fragment).commit();
         }
-    }
-    @Override
-    protected void onResume(){
-        super.onResume();
-        VKUIHelper.onResume(this);
-    }
-
-    @Override
-    protected void onDestroy(){
-        super.onDestroy();
-        VKUIHelper.onDestroy(this);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        VKUIHelper.onActivityResult(this, requestCode, resultCode, data);
     }
 }

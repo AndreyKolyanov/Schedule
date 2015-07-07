@@ -15,7 +15,6 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/title_activity_days_list"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.vk.sdk.VKOpenAuthActivity" />
         <activity
             android:name="ru.kolyanov542255.schedule_classes.LessonActivity"
             android:label="@string/title_activity_days_list" >
@@ -37,8 +36,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ru.kolyanov542255.schedule_classes.SettingsActivity"
-            android:label="@string/title_activity_settings"
+            android:name="ru.kolyanov542255.schedule_classes.SettingsPagerActivity"
+            android:label="@string/title_activity_settings_pager"
             android:parentActivityName="ru.kolyanov542255.schedule_classes.WeekPagerActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"

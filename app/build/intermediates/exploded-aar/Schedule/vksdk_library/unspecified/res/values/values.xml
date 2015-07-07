@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/vksdk_library/src/main/res/values/color.xml -->
+    <!-- From: file:/home/andrew/androidStudioProjects/Schedule/vksdk_library/src/main/res/values/color.xml -->
     <eat-comment/>
     <color name="vk_black">#000</color>
     <color name="vk_black_pressed">#1000</color>
@@ -14,7 +14,7 @@
     <color name="vk_share_link_title_color">#5477a3</color>
     <color name="vk_share_top_blue_color">#527dad</color>
     <color name="vk_white">#fff</color>
-    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/vksdk_library/src/main/res/values/dimen.xml -->
+    <!-- From: file:/home/andrew/androidStudioProjects/Schedule/vksdk_library/src/main/res/values/dimen.xml -->
     <eat-comment/>
     <dimen name="vk_share_dialog_padding">10dp</dimen>
     <dimen name="vk_share_dialog_padding_top">6dp</dimen>
@@ -31,7 +31,7 @@
     <dimen name="vk_share_top_line_margin">8dp</dimen>
     <dimen name="vk_share_top_panel_height">48dp</dimen>
     <dimen name="vk_share_top_title_margin">5dp</dimen>
-    <!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/vksdk_library/src/main/res/values/strings.xml -->
+    <!-- From: file:/home/andrew/androidStudioProjects/Schedule/vksdk_library/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="vk_enter_captcha_text">Enter captcha text here</string>
     <string name="vk_name">VK</string>

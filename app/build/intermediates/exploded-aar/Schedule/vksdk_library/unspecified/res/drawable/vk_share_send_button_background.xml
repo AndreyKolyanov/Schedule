@@ -5,4 +5,4 @@
     <item android:state_pressed="true" android:drawable="@drawable/vk_gray_transparent_shape"/>
     <item android:state_selected="true" android:drawable="@drawable/vk_gray_transparent_shape"/>
     <item android:drawable="@drawable/vk_clear_shape"/>
-</selector><!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/vksdk_library/src/main/res/drawable/vk_share_send_button_background.xml -->
+</selector><!-- From: file:/home/andrew/androidStudioProjects/Schedule/vksdk_library/src/main/res/drawable/vk_share_send_button_background.xml -->

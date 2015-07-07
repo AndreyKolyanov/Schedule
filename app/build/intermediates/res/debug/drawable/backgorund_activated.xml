@@ -4,4 +4,4 @@
         android:state_activated="true"
         android:drawable="@android:color/darker_gray"
         />
-</selector><!-- From: file:/C:/Users/Адольф/AndroidStudioProjects/Schedule/app/src/main/res/drawable/backgorund_activated.xml -->
+</selector><!-- From: file:/home/andrew/androidStudioProjects/Schedule/app/src/main/res/drawable/backgorund_activated.xml -->
