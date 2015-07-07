@@ -37,5 +37,7 @@
 
     <string name="title_activity_day_list">DayListActivity</string>
     <string name="title_activity_settings_pager">SettingsPagerActivity</string>
+    <string name="title_activity_settings">Настройки</string>
+    <string name="duration">Продолжительность занятия</string>
 
 </resources>

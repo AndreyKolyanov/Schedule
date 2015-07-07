@@ -1,6 +1,7 @@
 package ru.kolyanov542255.schedule_classes;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.util.Log;
 
@@ -25,6 +26,8 @@ public class DayLab {
     private DayLab(Context appContext){
 
         Resources res = appContext.getResources();
+        SharedPreferences sp = appContext.getSharedPreferences(WeekPagerActivity.APP_PREFS,
+                Context.MODE_PRIVATE);
         final String[] days_names = res.getStringArray(R.array.DaysOfWeek);
         this.context = appContext;
         this.mSerializer = new ScheduleJSONSerializer(context, FILENAME);
@@ -51,7 +54,8 @@ public class DayLab {
         if (days.isEmpty()) {
             Log.d(TAG, "days Empty");
             for (int i = 0, j = 0; i < 12; i++, j++) {
-                DayOfWeek d = new DayOfWeek(days_names[j].toString());
+                DayOfWeek d = new DayOfWeek(days_names[j].toString(),
+                        sp.getInt(SettingsActivity.DURATION,95));
                 if (i <= 5) {
                     d.setOdd(false);
                     evenWeek.add(d);

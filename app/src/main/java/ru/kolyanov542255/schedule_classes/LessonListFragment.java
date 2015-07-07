@@ -1,6 +1,7 @@
 package ru.kolyanov542255.schedule_classes;
 
 import android.app.ListFragment;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Build;
@@ -157,7 +158,9 @@ public class LessonListFragment extends ListFragment {
     public boolean onOptionsItemSelected(MenuItem item){
         switch (item.getItemId()){
             case R.id.menu_item_new_lesson:
-                    Lesson newLesson = new Lesson("");
+                    Lesson newLesson = new Lesson("", getActivity()
+                            .getSharedPreferences(WeekPagerActivity.APP_PREFS, Context.MODE_PRIVATE)
+                            .getInt(SettingsActivity.DURATION,95));
                     day.addLesson(newLesson);
                     lessons = day.getLessons();
                     ((LessonAdapter)getListAdapter()).notifyDataSetChanged();

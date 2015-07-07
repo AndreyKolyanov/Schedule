@@ -1,5 +1,6 @@
 package ru.kolyanov542255.schedule_classes;
 
+import android.app.Application;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
@@ -23,6 +24,8 @@ public class WeekPagerActivity extends FragmentActivity {
     private ViewPager viewPager;
 
     private ArrayList<ArrayList<DayOfWeek>> weeks;
+
+    public static final String APP_PREFS = "APP_PREFS";
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -71,7 +74,8 @@ public class WeekPagerActivity extends FragmentActivity {
     public boolean onOptionsItemSelected(MenuItem item){
         switch(item.getItemId()){
             case R.id.pager_week_menu:
-               //TODO
+               Intent i = new Intent(this, SettingsActivity.class);
+               startActivity(i);
             default:
                 return super.onOptionsItemSelected(item);
         }

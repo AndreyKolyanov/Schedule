@@ -1,5 +1,7 @@
 package ru.kolyanov542255.schedule_classes;
 
+import android.content.SharedPreferences;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -20,6 +22,7 @@ public class Lesson {
     private String homeWork;
     private String room;
     private String time;
+    private int duration;
 
     public static final String LESSON_ID = "id";
     public static final String LESSON_NAME = "name";
@@ -28,13 +31,14 @@ public class Lesson {
     public static final String LESSON_ROOM = "room";
     public static final String IS_SHOW_TIME = "showTime";
 
-    Lesson(String name){
+    Lesson(String name, int duration){
+        this.duration = duration;
         this.isShowTime = true;
         this.id = UUID.randomUUID();
         this.name = name;
         this.beginTime = new Date();
         long myTime = beginTime.getTime();
-        myTime += (90 * 60 * 1000);
+        myTime += (duration * 60 * 1000);
         this.endTime = new Date(myTime);
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
         if (isShowTime) {
@@ -46,12 +50,13 @@ public class Lesson {
         }
     }
 
-    public Lesson(JSONObject json) throws JSONException{
+    public Lesson(JSONObject json, int duration) throws JSONException{
         this.id = UUID.fromString(json.getString(LESSON_ID));
         this.name = json.getString(LESSON_NAME);
         this.beginTime = new Date(json.getLong(LESSON_BEGIN_TIME));
         this.teacher = json.getString(LESSON_TEACHER);
         this.isShowTime = true;
+        this.duration = duration;
         try{
             this.room = json.getString(LESSON_ROOM);
         } catch (JSONException e){
@@ -59,7 +64,7 @@ public class Lesson {
         }
 
         long myTime = beginTime.getTime();
-        myTime += (95 * 60 * 1000);
+        myTime += (duration * 60 * 1000);
         this.endTime = new Date(myTime);
         SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm");
 
@@ -130,7 +135,7 @@ public class Lesson {
     public void setBeginTime(Date beginTime) {
         this.beginTime = beginTime;
         long myTime = beginTime.getTime();
-        myTime += (95 * 60 * 1000);
+        myTime += (duration * 60 * 1000);
         this.endTime = new Date(myTime);
     }
 

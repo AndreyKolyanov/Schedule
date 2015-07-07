@@ -47,7 +47,9 @@ public class ScheduleJSONSerializer {
 
             JSONArray array = (JSONArray) new JSONTokener(jsonString.toString()).nextValue();
             for (int i = 0; i < array.length(); i++) {
-                days.add(new DayOfWeek(array.getJSONObject(i)));
+                days.add(new DayOfWeek(array.getJSONObject(i), context
+                        .getSharedPreferences(WeekPagerActivity.APP_PREFS,Context.MODE_PRIVATE)
+                        .getInt(SettingsActivity.DURATION,95)));
             }
 
         } catch (FileNotFoundException e){

@@ -17,21 +17,17 @@ public class DayOfWeek {
     private String name;
     private boolean isOdd;
     private UUID id;
+    private int duration;
 
-    DayOfWeek(String name){
+    DayOfWeek(String name, int duration){
         this.name = name;
         this.id = UUID.randomUUID();
+        this.duration = duration;
 
         lessons = new ArrayList<Lesson>();
-
-        Lesson l = new Lesson("+ Добавить");
-        l.setTeacher("");
-        l.setRoom("");
-        l.setShowTime(false);
-        lessons.add(l);
     }
 
-    DayOfWeek(JSONObject json)throws JSONException{
+    DayOfWeek(JSONObject json, int duration)throws JSONException{
         lessons = new ArrayList<Lesson>();
 
         this.name = json.getString("DAY_NAME");
@@ -40,7 +36,7 @@ public class DayOfWeek {
         JSONArray lessons_json = json.getJSONArray("LESSONS");
 
         for (int i = 0; i < lessons_json.length(); i++){
-            lessons.add(new Lesson(lessons_json.getJSONObject(i)));
+            lessons.add(new Lesson(lessons_json.getJSONObject(i),duration));
         }
 
     }
