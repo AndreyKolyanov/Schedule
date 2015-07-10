@@ -74,7 +74,6 @@ public class LessonListFragment extends ListFragment {
         View v = super.onCreateView(inflater, parent, savedInstanceState);
 
         ListView listView = (ListView)v.findViewById(android.R.id.list);
-        //registerForContextMenu(listView);
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.HONEYCOMB) {
             registerForContextMenu(listView);
         } else {
@@ -217,20 +216,8 @@ public class LessonListFragment extends ListFragment {
             TextView teacher = (TextView)convertView.findViewById(R.id.lesson_list_item_teacher);
             teacher.setText(l.getTeacher());
 
-            if (l.getName().length() > 16){
-                name_lesson.setTextSize(teacher.getTextSize());
-            }
-
             TextView room = (TextView)convertView.findViewById(R.id.lesson_list_item_room);
             room.setText(l.getRoom());
-
-            if (l.getName().length() > 18){
-                name_lesson.setTextSize(room.getTextSize());
-            }
-            if (l.getTeacher().length() > 18){
-                teacher.setTextSize(room.getTextSize());
-            }
-
 
             if (l.isShowTime()) {
                 TextView time = (TextView) convertView.findViewById(R.id.lesson_list_item_time);

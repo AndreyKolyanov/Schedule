@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="actionBar_myColor">#455A64</color>
+    <color name="window_background">#ECEFF1</color>
+    <color name="lis_item_color">#607D8B</color>
+    <color name="list_item_text_color">#ECEFF1</color>
+</resources>

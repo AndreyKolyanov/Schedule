@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.support.v4.app.ListFragment;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -35,10 +37,31 @@ public class DayListFragment extends ListFragment {
 
         days = weeks.get(num);
 
-        ArrayAdapter<DayOfWeek> adapter = new ArrayAdapter<DayOfWeek>(getActivity(),
-                android.R.layout.simple_list_item_1, days);
+
+        DaysAdapter adapter = new DaysAdapter(days);
         setListAdapter(adapter);
 
+    }
+
+    private class DaysAdapter extends ArrayAdapter<DayOfWeek>{
+
+        public DaysAdapter(ArrayList<DayOfWeek> days){
+            super(getActivity(), 0, days);
+        }
+
+        public View getView(int position, View convertView, ViewGroup parent){
+            if (convertView == null){
+                convertView = getActivity().getLayoutInflater()
+                        .inflate(R.layout.list_item_day, null);
+            }
+
+            DayOfWeek d = getItem(position);
+
+            TextView title = (TextView) convertView.findViewById(R.id.day_title);
+            title.setText(d.getName());
+
+            return convertView;
+        }
     }
 
     public static DayListFragment newInstance(int weekNumber){
