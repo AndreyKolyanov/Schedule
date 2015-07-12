@@ -16,7 +16,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/name_classes_text"
             android:id="@+id/lesson_name"
-            android:inputType="text"/>
+            android:inputType="text"
+            android:autoText="false"
+            android:textColorHint="@color/primary_text_default_material_dark"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -24,7 +26,9 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="@string/name_teacher_text"
             android:inputType="text"
-            android:id="@+id/teacher_name" />
+            android:id="@+id/teacher_name"
+            android:textColor="@color/abc_primary_text_material_light"
+            android:autoText="false"/>
 
         <EditText
             android:layout_width="match_parent"

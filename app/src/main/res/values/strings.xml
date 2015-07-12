@@ -39,5 +39,9 @@
     <string name="title_activity_settings_pager">SettingsPagerActivity</string>
     <string name="title_activity_settings">Настройки</string>
     <string name="duration">Продолжительность занятия</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="about">Расписание 1.0</string>
+    <string name="author">©Андрей Кольянов</string>
+    <string name="about_text">О программе...</string>
 
 </resources>

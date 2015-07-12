@@ -31,7 +31,18 @@
         </activity>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_activity_settings" >
+            android:icon="@drawable/ic_menu_settings"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".WeekPagerActivity" >
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_activity_about"
+            android:parentActivityName=".SettingsActivity"
+            android:theme="@style/Theme.AppCompat.Dialog">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ru.kolyanov542255.schedule_classes.SettingsActivity" />
         </activity>
     </application>
 
