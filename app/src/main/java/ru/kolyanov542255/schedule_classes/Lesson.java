@@ -35,7 +35,6 @@ public class Lesson {
         this.duration = duration;
         this.isShowTime = true;
         this.id = UUID.randomUUID();
-        this.name = name;
         this.beginTime = new Date();
         long myTime = beginTime.getTime();
         myTime += (duration * 60 * 1000);
@@ -44,7 +43,6 @@ public class Lesson {
         if (isShowTime) {
             this.time = dateFormat.format(this.beginTime) + "-" + '\n' + "-"
                     + dateFormat.format(this.endTime);
-            this.teacher = "";
         }else {
             this.time = "";
         }

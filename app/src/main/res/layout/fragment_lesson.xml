@@ -43,7 +43,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text=""
-            android:id="@+id/week_type_begin_time" />
+            android:id="@+id/week_type_begin_time"
+            android:background="@color/divider"/>
 
     </LinearLayout>
 

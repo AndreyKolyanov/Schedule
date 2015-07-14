@@ -115,7 +115,8 @@ public class LessonFragment extends Fragment {
         });
 
         titleField = (EditText)v.findViewById(R.id.lesson_name);
-        titleField.setText(lesson.getName());
+        if (lesson.getName() != null)
+            titleField.setText(lesson.getName());
 
         titleField.addTextChangedListener(new TextWatcher() {
 
@@ -133,7 +134,8 @@ public class LessonFragment extends Fragment {
         });
 
         teacherField = (EditText)v.findViewById(R.id.teacher_name);
-        teacherField.setText(lesson.getTeacher());
+        if (lesson.getTeacher() != null)
+            teacherField.setText(lesson.getTeacher());
 
         teacherField.addTextChangedListener(new TextWatcher() {
 
@@ -149,7 +151,8 @@ public class LessonFragment extends Fragment {
         });
 
         roomField = (EditText)v.findViewById(R.id.room);
-        roomField.setText(lesson.getRoom());
+        if (lesson.getRoom() != null)
+            roomField.setText(lesson.getRoom());
 
         roomField.addTextChangedListener(new TextWatcher() {
 
