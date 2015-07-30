@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ru.kolyanov542255.schedule_classes.LessonListActivity"/>
+      <point      
+        x = "496"      
+        y = "1480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ru.kolyanov542255.schedule_classes.AboutActivity"/>
+      <point      
+        x = "550"      
+        y = "1530"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ru.kolyanov542255.schedule_classes.SettingsActivity"/>
+      <point      
+        x = "3036"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "ru.kolyanov542255.schedule_classes.WeekPagerActivity"/>
+      <point      
+        x = "1768"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ru.kolyanov542255.schedule_classes.WeekPagerActivity"/>
+      <point      
+        x = "500"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ru.kolyanov542255.schedule_classes.LessonActivity"/>
+      <point      
+        x = "600"      
+        y = "1580"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

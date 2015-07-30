@@ -3,6 +3,7 @@ package ru.kolyanov542255.schedule_classes;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
+import android.app.TimePickerDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -15,8 +16,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TimePicker;
 
 import java.util.Date;
+import java.util.GregorianCalendar;
 import java.util.UUID;
 
 public class LessonFragment extends Fragment {
@@ -56,7 +59,7 @@ public class LessonFragment extends Fragment {
         return fragment;
     }
 
-    @Override
+    /*@Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode != Activity.RESULT_OK) return;
         if (requestCode == REQUEST_DATA) {
@@ -65,7 +68,7 @@ public class LessonFragment extends Fragment {
             lesson.setBeginTime(date);
             updateDate();
         }
-    }
+    }*/
 
     public void updateDate() {
         timeButton.setText(lesson.getTime());
@@ -107,10 +110,15 @@ public class LessonFragment extends Fragment {
 
         timeButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                FragmentManager fm = getActivity().getFragmentManager();
-                TimePickerFragment dialog = TimePickerFragment.newInstance(lesson.getBeginTime());
-                dialog.setTargetFragment(LessonFragment.this, REQUEST_DATA);
-                dialog.show(fm, DIALOG_TIME);
+                final TimePickerDialog dialog = new TimePickerDialog(getActivity(), new TimePickerDialog.OnTimeSetListener() {
+                    @Override
+                    public void onTimeSet(TimePicker view, int hourOfDay, int minute) {
+                        GregorianCalendar date = new GregorianCalendar(2015, 9, 1, hourOfDay, minute);
+                        lesson.setBeginTime(date.getTime());
+                        updateDate();
+                    }
+                }, 12, 0, true);
+                dialog.show();
             }
         });
 

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Schedule_classes</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="app_name">Расписание</string>
     <string name="homework_title_string">Домашнее задание</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="necessarily_string">Обязательно</string>
