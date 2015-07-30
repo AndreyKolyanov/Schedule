@@ -6,6 +6,15 @@
               android:background="@drawable/backgorund_activated"
               android:weightSum="1">
 
+    <android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="8dp"
+        android:layout_marginTop="4dp">
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,4 +30,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="@dimen/d25_dp"
         android:layout_marginBottom="@dimen/d15_dp"/>
+
+    </android.support.v7.widget.CardView>
 </RelativeLayout>

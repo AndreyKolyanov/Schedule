@@ -14,29 +14,28 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/name_classes_text"
             android:id="@+id/lesson_name"
             android:inputType="text"
             android:autoText="false"
-            android:textColorHint="@color/primary_text_default_material_dark"/>
+            android:hint="@string/name_classes_text"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/name_teacher_text"
             android:inputType="text"
             android:id="@+id/teacher_name"
             android:textColor="@color/abc_primary_text_material_light"
-            android:autoText="false"/>
+            android:autoText="false"
+            android:hint="@string/name_teacher_text"/>
 
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/room_text"
             android:inputType="text"
-            android:id="@+id/room" />
+            android:id="@+id/room"
+            android:hint="@string/room_text"/>
 
         <Button
             android:layout_width="match_parent"

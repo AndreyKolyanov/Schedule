@@ -59,17 +59,6 @@ public class LessonFragment extends Fragment {
         return fragment;
     }
 
-    /*@Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (resultCode != Activity.RESULT_OK) return;
-        if (requestCode == REQUEST_DATA) {
-            Date date = (Date)data
-                    .getSerializableExtra(TimePickerFragment.TIME_EXTRA);
-            lesson.setBeginTime(date);
-            updateDate();
-        }
-    }*/
-
     public void updateDate() {
         timeButton.setText(lesson.getTime());
     }
@@ -117,7 +106,7 @@ public class LessonFragment extends Fragment {
                         lesson.setBeginTime(date.getTime());
                         updateDate();
                     }
-                }, 12, 0, true);
+                }, lesson.getBeginTime().getHours(), lesson.getBeginTime().getMinutes(), true);
                 dialog.show();
             }
         });
